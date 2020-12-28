@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Chemical A
+  - Chemical B
+  - Chemical C
+  - Chemical D
   layers:
   - Default
   - TransparentFX
