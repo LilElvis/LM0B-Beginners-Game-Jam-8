@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5220b9ffab37c40a0d9c873e2bccf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialRef: {fileID: 2100000, guid: 64e6aafe853204b41b8a49120474028e, type: 2}
+  particleSystemRef: {fileID: 254347490629822049, guid: 9005d75130ed51947b5b37fa2f57f169, type: 3}
+  worldSpaceParticleParent: {fileID: 0}
   type: 2
 --- !u!1001 &1664466726178292427
 PrefabInstance:
@@ -72,6 +75,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6543773305079512884, guid: fa796d0c8eb7f844482157e17fd4432e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 64e6aafe853204b41b8a49120474028e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa796d0c8eb7f844482157e17fd4432e, type: 3}
 --- !u!1 &5605143761339432386 stripped

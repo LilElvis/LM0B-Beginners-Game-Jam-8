@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5220b9ffab37c40a0d9c873e2bccf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialRef: {fileID: 2100000, guid: 4facf82b14cc65742924b7e905377ce3, type: 2}
+  particleSystemRef: {fileID: 254347490629822049, guid: 9005d75130ed51947b5b37fa2f57f169, type: 3}
+  worldSpaceParticleParent: {fileID: 0}
   type: 3
 --- !u!1001 &4572606223179496218
 PrefabInstance:

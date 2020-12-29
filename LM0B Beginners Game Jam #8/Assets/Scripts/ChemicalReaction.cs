@@ -6,6 +6,12 @@ public class ChemicalReaction : MonoBehaviour
 {
     Transform transformRef = null;
     Rigidbody rigidbodyRef = null;
+    [SerializeField]
+    Material materialRef = null;
+    [SerializeField]
+    ParticleSystem particleSystemRef = null;
+    ParticleSystem.MainModule particleSettings;
+    public Transform worldSpaceParticleParent = null;
 
     enum Chemical
     {
@@ -25,6 +31,8 @@ public class ChemicalReaction : MonoBehaviour
     {
         transformRef = transform;
         rigidbodyRef = transformRef.GetComponent<Rigidbody>();
+
+        particleSettings = particleSystemRef.main;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -34,36 +42,28 @@ public class ChemicalReaction : MonoBehaviour
             case Chemical.A:
                 if(collision.gameObject.CompareTag("Chemical B"))
                 {
-                    ContactPoint contact = collision.contacts[0];
-                    rigidbodyRef.AddExplosionForce(explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
-                    collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(-explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
+                    CreateExplosion(collision);
                     print("A touched B.");
                 }
                 break;
             case Chemical.B:
                 if (collision.gameObject.CompareTag("Chemical C"))
                 {
-                    ContactPoint contact = collision.contacts[0];
-                    rigidbodyRef.AddExplosionForce(explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
-                    collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(-explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
+                    CreateExplosion(collision);
                     print("B touched C.");
                 }
                 break;
             case Chemical.C:
                 if (collision.gameObject.CompareTag("Chemical D"))
                 {
-                    ContactPoint contact = collision.contacts[0];
-                    rigidbodyRef.AddExplosionForce(explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
-                    collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(-explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
+                    CreateExplosion(collision);
                     print("C touched D.");
                 }
                 break;
             case Chemical.D:
                 if (collision.gameObject.CompareTag("Chemical A"))
                 {
-                    ContactPoint contact = collision.contacts[0];
-                    rigidbodyRef.AddExplosionForce(explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
-                    collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(-explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
+                    CreateExplosion(collision);
                     print("D touched A.");
                 }
                 break;
@@ -71,5 +71,16 @@ public class ChemicalReaction : MonoBehaviour
                 print("Chemical collision detected!");
                 break;
         }
+    }
+
+    void CreateExplosion(Collision collision)
+    {
+        ContactPoint contact = collision.contacts[0];
+
+        particleSettings.startColor = materialRef.color;
+        ParticleSystem temp = Instantiate(particleSystemRef, contact.point, Quaternion.identity);
+        
+        rigidbodyRef.AddExplosionForce(explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
+        collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(-explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
     }
 }
