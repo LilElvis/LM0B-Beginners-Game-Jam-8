@@ -68,7 +68,7 @@ public class ChemicalReaction : MonoBehaviour
                 }
                 break;
             default:
-                print("CHemical collision decteted!");
+                print("Chemical collision detected!");
                 break;
         }
     }
