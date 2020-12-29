@@ -24,8 +24,9 @@ public class ChemicalReaction : MonoBehaviour
     [SerializeField]
     Chemical type;
 
-    float explosionForce = 25.0f;
-    float explosionRadius = 5.0f;
+    float explosionForce = 35.0f;
+    float explosionRadius = 10.0f;
+    float upwardsModifier = 0.0f;
 
     private void Awake()
     {
@@ -80,7 +81,7 @@ public class ChemicalReaction : MonoBehaviour
         particleSettings.startColor = materialRef.color;
         ParticleSystem temp = Instantiate(particleSystemRef, contact.point, Quaternion.identity);
         
-        rigidbodyRef.AddExplosionForce(explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
-        collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(-explosionForce, contact.point, explosionRadius, 0.0f, ForceMode.Impulse);
+        rigidbodyRef.AddExplosionForce(explosionForce, contact.point, explosionRadius, upwardsModifier, ForceMode.Impulse);
+        collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(-explosionForce, contact.point, explosionRadius, upwardsModifier, ForceMode.Impulse);
     }
 }
