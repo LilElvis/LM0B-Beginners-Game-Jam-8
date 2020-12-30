@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialRef: {fileID: 2100000, guid: 64e6aafe853204b41b8a49120474028e, type: 2}
+  audioSourceRef: {fileID: 7854325048708417963}
   particleSystemRef: {fileID: 254347490629822049, guid: 9005d75130ed51947b5b37fa2f57f169, type: 3}
-  worldSpaceParticleParent: {fileID: 0}
   type: 2
 --- !u!1001 &1664466726178292427
 PrefabInstance:
@@ -84,5 +84,10 @@ PrefabInstance:
 --- !u!1 &5605143761339432386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6543773305079512841, guid: fa796d0c8eb7f844482157e17fd4432e, type: 3}
+  m_PrefabInstance: {fileID: 1664466726178292427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &7854325048708417963 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -425180391672427680, guid: fa796d0c8eb7f844482157e17fd4432e, type: 3}
   m_PrefabInstance: {fileID: 1664466726178292427}
   m_PrefabAsset: {fileID: 0}

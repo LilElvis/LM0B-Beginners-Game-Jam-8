@@ -9,9 +9,10 @@ public class ChemicalReaction : MonoBehaviour
     [SerializeField]
     Material materialRef = null;
     [SerializeField]
+    AudioSource audioSourceRef = null;
+    [SerializeField]
     ParticleSystem particleSystemRef = null;
     ParticleSystem.MainModule particleSettings;
-    public Transform worldSpaceParticleParent = null;
 
     enum Chemical
     {
@@ -83,5 +84,7 @@ public class ChemicalReaction : MonoBehaviour
         
         rigidbodyRef.AddExplosionForce(explosionForce, contact.point, explosionRadius, upwardsModifier, ForceMode.Impulse);
         collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(-explosionForce, contact.point, explosionRadius, upwardsModifier, ForceMode.Impulse);
+
+        audioSourceRef.Play();
     }
 }

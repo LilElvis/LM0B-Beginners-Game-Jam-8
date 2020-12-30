@@ -8,6 +8,7 @@ TagManager:
   - Chemical B
   - Chemical C
   - Chemical D
+  - Sensor
   layers:
   - Default
   - TransparentFX

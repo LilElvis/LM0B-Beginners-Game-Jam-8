@@ -6,7 +6,7 @@ public class PlayerControls : MonoBehaviour
 {
     Transform transformRef;
     [SerializeField]
-    Rigidbody rigidbodyRef;
+    CharacterController characterControllerRef;
 
     private void Awake()
     {
@@ -22,7 +22,8 @@ public class PlayerControls : MonoBehaviour
     {
         if (Input.GetAxis("Horizontal") != 0.0f)
         {
-            rigidbodyRef.MovePosition(new Vector3(transformRef.position.x + (0.1f * Input.GetAxis("Horizontal")), 0.0f, 0.0f));
+            //rigidbodyRef.MovePosition(new Vector3(transformRef.position.x + (0.1f * Input.GetAxis("Horizontal")), 0.0f, 0.0f));
+            characterControllerRef.Move(new Vector3(0.1f * Input.GetAxis("Horizontal"), 0.0f, 0.0f));
         }
     }
 }
