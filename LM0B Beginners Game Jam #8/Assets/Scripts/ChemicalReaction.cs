@@ -14,6 +14,9 @@ public class ChemicalReaction : MonoBehaviour
     ParticleSystem particleSystemRef = null;
     ParticleSystem.MainModule particleSettings;
 
+    float textureOffsetX = 0.0f;
+    float textureOffsetY = 0.0f;
+
     enum Chemical
     {
         A,
@@ -35,6 +38,14 @@ public class ChemicalReaction : MonoBehaviour
         rigidbodyRef = transformRef.GetComponent<Rigidbody>();
 
         particleSettings = particleSystemRef.main;
+    }
+
+    private void Update()
+    {
+        textureOffsetX = textureOffsetX += 0.0003f;
+        textureOffsetY = textureOffsetY += 0.0012f;
+
+        materialRef.SetTextureOffset("_MainTex", new Vector2(textureOffsetX, textureOffsetY));
     }
 
     private void OnCollisionEnter(Collision collision)
