@@ -6,7 +6,8 @@ public class PlayerControls : MonoBehaviour
 {
     Transform transformRef;
     [SerializeField]
-    CharacterController characterControllerRef;
+    CharacterController characterControllerRef = null;
+
 
     private void Awake()
     {
