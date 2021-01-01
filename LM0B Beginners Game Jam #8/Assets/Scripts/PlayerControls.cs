@@ -21,7 +21,7 @@ public class PlayerControls : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetAxis("Horizontal") != 0.0f)
+        if (Input.GetAxis("Horizontal") != 0.0f && GameData.GameOn)
         {
             //rigidbodyRef.MovePosition(new Vector3(transformRef.position.x + (0.1f * Input.GetAxis("Horizontal")), 0.0f, 0.0f));
             characterControllerRef.Move(new Vector3(0.1f * Input.GetAxis("Horizontal"), 0.0f, 0.0f));
