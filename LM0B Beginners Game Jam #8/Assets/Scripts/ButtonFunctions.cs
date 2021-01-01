@@ -10,4 +10,10 @@ public class ButtonFunctions : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void LoadLevel(int levelNumber)
+    {
+        GameData.CurrentLevelSelection = levelNumber;
+        SceneManager.LoadScene("MainGame");
+    }
 }

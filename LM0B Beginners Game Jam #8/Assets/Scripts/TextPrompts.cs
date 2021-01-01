@@ -16,6 +16,8 @@ public class TextPrompts : MonoBehaviour
     private AudioSource audioSourceRef;
     public AudioClip countdownLow;
     public AudioClip countdownHigh;
+    public AudioClip alert;
+    public AudioClip tick;
 
     private void Awake()
     {
@@ -103,27 +105,45 @@ public class TextPrompts : MonoBehaviour
     IEnumerator FinalCountdown()
     {
         if (GameData.GameOn)
+        {
             HoldIt();
+            audioSourceRef.PlayOneShot(alert);
+        }
         yield return oneSecond;
 
         if (GameData.GameOn)
+        {
             Five();
+            audioSourceRef.PlayOneShot(tick);
+        }
         yield return oneSecond;
 
         if (GameData.GameOn)
+        {
             Four();
+            audioSourceRef.PlayOneShot(tick);
+        }
         yield return oneSecond;
 
         if (GameData.GameOn)
+        {
             Three();
+            audioSourceRef.PlayOneShot(tick);
+        }
         yield return oneSecond;
 
         if (GameData.GameOn)
+        {
             Two();
+            audioSourceRef.PlayOneShot(tick);
+        }
         yield return oneSecond;
 
         if (GameData.GameOn)
+        {
             One();
+            audioSourceRef.PlayOneShot(tick);
+        }
         yield return oneSecond;
 
         if(GameData.GameOn)
