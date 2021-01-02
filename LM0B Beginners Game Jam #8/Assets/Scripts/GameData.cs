@@ -12,6 +12,14 @@ public static class GameData
         set { currentLevelSelection = value; }
     }
 
+    private static int levelsUnlocked = 0;
+
+    public static int LevelsUnlocked
+    {
+        get { return levelsUnlocked; }
+        set { levelsUnlocked = value; }
+    }
+
     private static bool gameOn = false;
 
     public static bool GameOn

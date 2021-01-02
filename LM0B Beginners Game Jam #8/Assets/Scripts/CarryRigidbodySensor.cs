@@ -11,16 +11,20 @@ public class CarryRigidbodySensor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Rigidbody temp = other.GetComponent<Rigidbody>();
-        if (temp != null)
+        if (temp != null && carrier != null)
+        {
             if (temp != carrier.rigidbodyRef)
                 carrier.Add(temp);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         Rigidbody temp = other.GetComponent<Rigidbody>();
-        if (temp != null)
+        if (temp != null && carrier != null)
+        {
             if (temp != carrier.rigidbodyRef)
                 carrier.Remove(temp);
+        }
     }
 }

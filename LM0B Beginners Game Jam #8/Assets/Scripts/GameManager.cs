@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
             deathBoundaries.SetActive(false);
 
             GameData.CurrentLevelSelection++;
+            if (GameData.CurrentLevelSelection > GameData.LevelsUnlocked)
+                GameData.LevelsUnlocked = GameData.CurrentLevelSelection;
+
             if (!(GameData.CurrentLevelSelection > Levels.Count - 1))
             {
                 //Fire Game Over event

@@ -25,7 +25,7 @@ public class FallHarder : MonoBehaviour
             Rigidbody[] rigidbodies = GetComponentsInChildren<Rigidbody>();
             for (int i = 0; i < rigidbodies.Length; i++)
             {
-                rigidbodies[i].drag = -2.5f;
+                rigidbodies[i].drag = 0.0f;
             }
         }
         if (messageType == EventRelay.EventMessageType.GameWon)

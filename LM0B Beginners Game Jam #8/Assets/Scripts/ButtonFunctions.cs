@@ -16,4 +16,14 @@ public class ButtonFunctions : MonoBehaviour
         GameData.CurrentLevelSelection = levelNumber;
         SceneManager.LoadScene("MainGame");
     }
+
+    public void EnableGameObject(GameObject gameObject)
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void DisableGameObject(GameObject gameObject)
+    {
+        gameObject.SetActive(false);
+    }
 }
