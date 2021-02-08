@@ -24,7 +24,7 @@ public class PlayerAnimation : MonoBehaviour
         float t = 0.5f;
 
         if (GameData.GameOn)
-            t = (Input.GetAxis("Horizontal") / 2.0f + 0.5f);
+            t = (PlayerControls.GetTouchHorizontalAxis() / 2.0f + 0.5f);
         
         transformRef.SetPositionAndRotation(new Vector3(transformRef.position.x, defaultPos.y, defaultPos.z), Quaternion.Lerp(leftTilt, rightTilt, t));
     }

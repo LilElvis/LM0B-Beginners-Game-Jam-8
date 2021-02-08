@@ -388,7 +388,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: And press D to go right...
+  m_Text: And touch right to go right...
 --- !u!222 &181652847
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -810,7 +810,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317117233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5, y: -6.5, z: 0}
+  m_LocalPosition: {x: 5.5, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 70293665}
@@ -878,7 +878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 250}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &321653416
@@ -1618,7 +1618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501270946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5, y: -6.5, z: 0}
+  m_LocalPosition: {x: -5.5, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 70293665}
@@ -2854,7 +2854,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press A to move left...
+  m_Text: Touch left to move left...
 --- !u!222 &937412242
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3369,7 +3369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6543773305079512882, guid: fa796d0c8eb7f844482157e17fd4432e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 46
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 6543773305079512882, guid: fa796d0c8eb7f844482157e17fd4432e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3579,7 +3579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5144823406142236471, guid: 16dc9747a5c970a49b23fa7b8597c745, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 63
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 5144823406142236471, guid: 16dc9747a5c970a49b23fa7b8597c745, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3760,7 +3760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6543773305079512882, guid: fa796d0c8eb7f844482157e17fd4432e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6543773305079512882, guid: fa796d0c8eb7f844482157e17fd4432e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4240,7 +4240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6543773305079512882, guid: fa796d0c8eb7f844482157e17fd4432e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 6543773305079512882, guid: fa796d0c8eb7f844482157e17fd4432e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6433,7 +6433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7324275781841454120, guid: af80a7752847f1746978c9816184fdac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 80
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 7324275781841454120, guid: af80a7752847f1746978c9816184fdac, type: 3}
       propertyPath: m_LocalPosition.z
